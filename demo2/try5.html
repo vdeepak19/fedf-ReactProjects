@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calculator</title>
+</head>
+<body>
+<h2>Simple Calculator</h2>
+<input type="text" id="klu">
+<button onclick="calculate()">=</button>
+<button onclick="clearDisplay()">Clear</button>
+<label>{expr}</label>
+<script>
+  function calculate() {
+    try {
+      const expr = document.getElementById('klu').value;
+      document.getElementById('klu').value = eval(expr);
+    } catch {
+      document.getElementById('klu').value = 'Error';
+    }
+  }
+  function clearDisplay() {
+    document.getElementById('klu').value = '';
+  }
+</script>
+</body>
+</html>
